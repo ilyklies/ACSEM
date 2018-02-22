@@ -1,0 +1,85 @@
+					  $("#myTable tr:gt(0)").each(function () {
+              
+                      var this_row = $(this);
+                      var sportsid = $.trim(this_row.find('td:eq(0)').html());//td:eq(0) means first td of this row
+                      var sname = $.trim(this_row.find('td:eq(1)').html())
+                      var scat = $.trim(this_row.find('td:eq(2)').html())
+                      var shapeId = document.getElementById("shape");
+                      var selim = shapeId.options[shapeId.selectedIndex].value;
+                      //var selim = $.trim(this_row.find('td:eq(3)').text())
+
+                      //alert( productId + " " +  product + " " + Quantity);
+
+                      $.ajax({
+                          type: 'POST',
+                          url: 'php/processJSONarray.php',
+                          data: { SportsID: sportsid, SportsName: sname , SportsCateg: scat , SportsElim: selim    },
+                          success: function(response) {
+                              
+                               $('#result').html(response);
+                          }
+                      });
+
+                      });
+
+
+
+
+
+					  $("#myTable1 tr:gt(0)").each(function () {
+              
+                      var this_row = $(this);
+                      var depid = $.trim(this_row.find('td:eq(0)').html());//td:eq(0) means first td of this row
+                      //var selim = $.trim(this_row.find('td:eq(3)').text())
+
+                      //alert( productId + " " +  product + " " + Quantity);
+
+                      $.ajax({
+                          type: 'POST',
+                          url: 'php/processJSONarray.php',
+                          data: { DepID: depid },
+                          success: function(response) {
+                              
+                               $('#result').html(response);
+                          }
+                      });
+
+                      });
+
+                      $("#myTable2 tr:gt(0)").each(function () {
+              
+                      var this_row = $(this);
+                      var userid = $.trim(this_row.find('td:eq(0)').html());//td:eq(0) means first td of this row
+                      //var selim = $.trim(this_row.find('td:eq(3)').text())
+
+                      //alert( productId + " " +  product + " " + Quantity);
+
+                      $.ajax({
+                          type: 'POST',
+                          url: 'php/processJSONarray.php',
+                          data: { UserID: userid },
+                          success: function(response) {
+                              
+                               $('#result').html(response);
+                          }
+                      });
+
+                      });
+
+
+
+                      confirm("Are you sure you want to continue?");
+                      var eventn = $('#eventN').val();
+                      var eventd = $('#eventD').val();
+                      var events = $('#eventS').val();
+                      var evente = $('#eventE').val();
+                      
+                      
+                      $.ajax({
+                          type: 'POST',
+                          url: 'php/eventadd.php',
+                          data: { eventN: eventn, eventD: eventd , eventS: events , eventE: evente  },
+                          success: function(response) {
+                              $('#result').html(response);
+                          }
+                      });

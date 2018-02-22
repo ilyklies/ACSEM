@@ -1,0 +1,99 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+p {
+	margin: 20px 0 5px 0;
+	padding: 0;
+
+}
+
+body {
+	
+    background-repeat: no-repeat;
+    background-size: 100% 100%; 
+	font-family: Montserrat;
+	color: #fff;
+	
+}
+
+.form {
+	padding: 40px;
+	max-width: 600px;
+	margin: 40px;
+	float: right;
+	border-radius: 4px;
+	box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+.login-info {
+	margin: 0 0 0 20px;
+}
+
+label {
+	display: inline-block;
+	max-width: 100%;
+	padding: 20px;
+	color: #fff;
+	
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+.login-inpt {
+	display: block;
+    background-color: transparent;
+    border: 0;
+    border-bottom: solid 1px #FFF;
+    border-radius: 0;
+    height: 27px;
+    line-height: 27px;
+    width: 100%;
+
+}
+::-webkit-input-placeholder {
+  color: white;
+}
+
+.button {
+	background-color: transparent;
+    border: solid 1.5px #39579b;
+    border-radius: 256px;
+    color: #39579b;
+    display: block;
+    font-size: 13px;
+    letter-spacing: .03em;
+    line-height: 1.25em;
+    margin: 20px auto;
+    max-width: 320px;
+    height: 41px;
+    overflow: hidden;
+    padding: 2px 15px 0;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+
+.login-lbl {
+	box-sizing: border-box;
+    color: #000;
+    font-weight: normal;
+    line-height: 1em;
+    outline: 0 none;
+    text-decoration: none;
+
+}
+
+.row {
+	
+	margin: 13% 10% auto;
+	padding: 0;
+	display: block;
+	
+}
